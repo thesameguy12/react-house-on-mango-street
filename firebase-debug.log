@@ -1,0 +1,87 @@
+[debug] [2023-11-12T12:27:21.329Z] ----------------------------------------------------------------------
+[debug] [2023-11-12T12:27:21.331Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Emir\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-11-12T12:27:21.331Z] CLI Version:   12.8.1
+[debug] [2023-11-12T12:27:21.331Z] Platform:      win32
+[debug] [2023-11-12T12:27:21.331Z] Node Version:  v16.13.0
+[debug] [2023-11-12T12:27:21.332Z] Time:          Sun Nov 12 2023 13:27:21 GMT+0100 (Central European Standard Time)
+[debug] [2023-11-12T12:27:21.332Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-12T12:27:21.410Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-12T12:27:21.410Z] > authorizing via signed-in user (emooo2004banana@gmail.com)
+[debug] [2023-11-12T12:27:21.411Z] [iam] checking project ulicamango for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-12T12:27:21.413Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ulicamango:testIamPermissions [none]
+[debug] [2023-11-12T12:27:21.413Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ulicamango:testIamPermissions x-goog-quota-user=projects/ulicamango
+[debug] [2023-11-12T12:27:21.413Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ulicamango:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-12T12:27:22.268Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ulicamango:testIamPermissions 200
+[debug] [2023-11-12T12:27:22.268Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ulicamango:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-12T12:27:22.269Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ulicamango [none]
+[debug] [2023-11-12T12:27:22.536Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ulicamango 200
+[debug] [2023-11-12T12:27:22.536Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ulicamango {"projectId":"ulicamango","projectNumber":"1055587736663","displayName":"mango","name":"projects/ulicamango","resources":{"hostingSite":"ulicamango"},"state":"ACTIVE","etag":"1_2fe52492-3cd5-45a4-9ad8-fd2747b13493"}
+[info] 
+[info] === Deploying to 'ulicamango'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-11-12T12:27:22.543Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ulicamango/versions [none]
+[debug] [2023-11-12T12:27:22.543Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ulicamango/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-11-12T12:27:24.073Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ulicamango/versions 200
+[debug] [2023-11-12T12:27:24.073Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ulicamango/versions {"name":"projects/1055587736663/sites/ulicamango/versions/396fb38ef911f7e6","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[ulicamango]: beginning deploy... 
+[info] i  hosting[ulicamango]: found 35 files in build 
+[debug] [2023-11-12T12:27:24.091Z] [hosting] uploading with 200 concurrency
+[debug] [2023-11-12T12:27:24.097Z] [hosting] hash cache [YnVpbGQ] stored for 35 files
+[debug] [2023-11-12T12:27:24.098Z] [hosting][hash queue][FINAL] {"max":3,"min":1,"avg":1,"active":0,"complete":35,"success":35,"errored":0,"retried":0,"total":35,"elapsed":5}
+[debug] [2023-11-12T12:27:24.098Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1055587736663/sites/ulicamango/versions/396fb38ef911f7e6:populateFiles [none]
+[debug] [2023-11-12T12:27:24.098Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1055587736663/sites/ulicamango/versions/396fb38ef911f7e6:populateFiles {"files":{"/2019-04-20_-_Quiet_Time_-_David_Fesliyan.mp3":"119c0067ab5529238976770701348bf3921d9ba4ad2d6e06f058f207e0f6a1d3","/404.html":"daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa","/asset-manifest.json":"adcbe83cd4ded4cf49d74ac15d7e01fd693418fb39e7d17ffa127f5d0f0947f6","/background.webp":"c42de945d4109baaba1773e590a15999ad497d559da7e36e56fc66fc5991d996","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/hamburger-62.svg":"d6b3232fa5888524720f8c0b0deca8f6bceef71830132e25f3bada59e8e657c3","/icon.jpg":"e80771d6885d3dd60ee216bdbe3093438e0133887c884ae50d4e308c736d4ffb","/index.html":"d70e0416c19c1e8a9b323889780a8c28eacc2070e6005d7f9499073cdc5b6bb9","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/reshot-icon-arrow-up-ZGEKU95YAJ.svg":"266b7dc491285b7366d2dcf440c28a434bd5712e07b0f008eb34c7826f73eac4","/reshot-icon-play-YFVSERKZM7.svg":"830475f5154732c6e4a8ed5ca13741bda7e0d7e345c8f639dc3c49983bc5d5e0","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/paragrafImages/p1.png":"5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91","/paragrafImages/p10.jpg":"46d651d56d6dac00843dc2aded0628909ee1419e981b14744f5840732645c7b8","/paragrafImages/p12.png":"93a469860d04df6c15b9654cd22916231f2872a2c140f04a497da780086bdb07","/paragrafImages/p13.png":"05dae57b3856f8d50f2767d4d45fe6f80db500ce68f51cfdea814ded8b2c16bc","/paragrafImages/p14.png":"e2204c461545cd3b76d5c7ff79dbae81359029c711fb9b8a8928f757a4a45c8e","/paragrafImages/p15.png":"ab4a342c5230ecabeba3f1922616e2de802fc099ea67a54bcd9c5db1eadf9da8","/paragrafImages/p16.jpg":"cdd3f7ecc0f212fb7319bc4224be2c34f612c7da78ebea2d3322414721af49b2","/paragrafImages/p2.jpg":"030acc8d982b3c09f65f2f8c6578b2bc988cb48535df5f7d92e1b52515f98230","/paragrafImages/p3.jpg":"cb8d3b97069e010b72506361fafa744f10e6d1468558e55cfa90ade90be9f5f6","/paragrafImages/p4.png":"b526185e833d02d3dbaad421d5b962309140d07b574fb72866ae539049b0ceac","/paragrafImages/p5.jpg":"5f38b86431ce20eb26a41cac260e2f003c3eec4c05e871c6ae8d49aafae5b2d9","/paragrafImages/p6.jpg":"5aa043efa76ce426efa976a04c17fbcc8631a40f7137ce1a28e3e12bed3165a3","/paragrafImages/p8.jpg":"9bc95e4861e43d92ab81d2ae997251bff76bebddf812488ae6a21572bb797274","/static/css/main.6ec75374.css":"4cd99576254d76df1b00ee14675281b7ba4a828d740c6fec6eab9e1779817dcc","/static/css/main.6ec75374.css.map":"0472e1e2c8de203970abe280c0aa31d59ba15b0bb2393d9c003c44c3ae1c8657","/static/js/787.065b8b99.chunk.js":"4028d878693522e6c809b263e1947f95b2e36f20bfd9883dc86ad922fc65f400","/static/js/787.065b8b99.chunk.js.map":"0a19b8d1c04e52da699fb3da3a34421b67bfc546ca130a140c26795b69f8a6f1","/static/js/main.8f43b7bf.js":"e6bf6e88a2dbc8c1750d2b749770ceaa5d6a721facadf663b95aa0d4db423915","/static/js/main.8f43b7bf.js.LICENSE.txt":"e14e81d8175e5f03ac84d76d4fc4e4baadb6d0b2bff30ab5496055f214b0b44f","/static/js/main.8f43b7bf.js.map":"3b6db8ea44ec04a6adf1f5c5d7a43a857d8ee607e98f081e3420e27ca8649673","/static/media/background.a72d606a90e5a93f4898.webp":"c42de945d4109baaba1773e590a15999ad497d559da7e36e56fc66fc5991d996"}}
+[debug] [2023-11-12T12:27:25.315Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1055587736663/sites/ulicamango/versions/396fb38ef911f7e6:populateFiles 200
+[debug] [2023-11-12T12:27:25.315Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1055587736663/sites/ulicamango/versions/396fb38ef911f7e6:populateFiles {"uploadRequiredHashes":["b526185e833d02d3dbaad421d5b962309140d07b574fb72866ae539049b0ceac","5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91","05dae57b3856f8d50f2767d4d45fe6f80db500ce68f51cfdea814ded8b2c16bc","ab4a342c5230ecabeba3f1922616e2de802fc099ea67a54bcd9c5db1eadf9da8"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files"}
+[debug] [2023-11-12T12:27:25.316Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/b526185e833d02d3dbaad421d5b962309140d07b574fb72866ae539049b0ceac [none]
+[debug] [2023-11-12T12:27:25.317Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/b526185e833d02d3dbaad421d5b962309140d07b574fb72866ae539049b0ceac [stream]
+[debug] [2023-11-12T12:27:25.318Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 [none]
+[debug] [2023-11-12T12:27:25.318Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 [stream]
+[debug] [2023-11-12T12:27:25.319Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/05dae57b3856f8d50f2767d4d45fe6f80db500ce68f51cfdea814ded8b2c16bc [none]
+[debug] [2023-11-12T12:27:25.319Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/05dae57b3856f8d50f2767d4d45fe6f80db500ce68f51cfdea814ded8b2c16bc [stream]
+[debug] [2023-11-12T12:27:25.320Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/ab4a342c5230ecabeba3f1922616e2de802fc099ea67a54bcd9c5db1eadf9da8 [none]
+[debug] [2023-11-12T12:27:25.321Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/ab4a342c5230ecabeba3f1922616e2de802fc099ea67a54bcd9c5db1eadf9da8 [stream]
+[debug] [2023-11-12T12:27:25.322Z] [hosting][populate queue][FINAL] {"max":1220,"min":1220,"avg":1220,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1226}
+[debug] [2023-11-12T12:27:25.322Z] [hosting] uploads queued: 4
+[debug] [2023-11-12T12:27:55.736Z] [uploadQueue] Retrying task 5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91
+[debug] [2023-11-12T12:27:55.738Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 [none]
+[debug] [2023-11-12T12:27:55.738Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 [stream]
+[debug] [2023-11-12T12:28:26.554Z] [uploadQueue] Retrying task 5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91
+[debug] [2023-11-12T12:28:26.555Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 [none]
+[debug] [2023-11-12T12:28:26.555Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 [stream]
+[debug] [2023-11-12T12:28:50.387Z] [uploadQueue] Retrying task b526185e833d02d3dbaad421d5b962309140d07b574fb72866ae539049b0ceac
+[debug] [2023-11-12T12:28:50.388Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/b526185e833d02d3dbaad421d5b962309140d07b574fb72866ae539049b0ceac [none]
+[debug] [2023-11-12T12:28:50.388Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/b526185e833d02d3dbaad421d5b962309140d07b574fb72866ae539049b0ceac [stream]
+[debug] [2023-11-12T12:28:58.188Z] [uploadQueue] Retrying task 5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91
+[debug] [2023-11-12T12:28:58.192Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 [none]
+[debug] [2023-11-12T12:28:58.193Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 [stream]
+[debug] [2023-11-12T12:29:02.459Z] [uploadQueue] Retrying task 05dae57b3856f8d50f2767d4d45fe6f80db500ce68f51cfdea814ded8b2c16bc
+[debug] [2023-11-12T12:29:02.461Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/05dae57b3856f8d50f2767d4d45fe6f80db500ce68f51cfdea814ded8b2c16bc [none]
+[debug] [2023-11-12T12:29:02.461Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/05dae57b3856f8d50f2767d4d45fe6f80db500ce68f51cfdea814ded8b2c16bc [stream]
+[debug] [2023-11-12T12:29:31.422Z] [uploadQueue] Retrying task 5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91
+[debug] [2023-11-12T12:29:31.423Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 [none]
+[debug] [2023-11-12T12:29:31.423Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 [stream]
+[debug] [2023-11-12T12:29:56.015Z] [uploadQueue] Retrying task ab4a342c5230ecabeba3f1922616e2de802fc099ea67a54bcd9c5db1eadf9da8
+[debug] [2023-11-12T12:29:56.017Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/ab4a342c5230ecabeba3f1922616e2de802fc099ea67a54bcd9c5db1eadf9da8 [none]
+[debug] [2023-11-12T12:29:56.018Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/ab4a342c5230ecabeba3f1922616e2de802fc099ea67a54bcd9c5db1eadf9da8 [stream]
+[debug] [2023-11-12T12:30:07.843Z] [uploadQueue] Retrying task 5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91
+[debug] [2023-11-12T12:30:07.844Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 [none]
+[debug] [2023-11-12T12:30:07.844Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 [stream]
+[debug] [2023-11-12T12:30:15.852Z] [uploadQueue] Retrying task b526185e833d02d3dbaad421d5b962309140d07b574fb72866ae539049b0ceac
+[debug] [2023-11-12T12:30:15.853Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/b526185e833d02d3dbaad421d5b962309140d07b574fb72866ae539049b0ceac [none]
+[debug] [2023-11-12T12:30:15.853Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/b526185e833d02d3dbaad421d5b962309140d07b574fb72866ae539049b0ceac [stream]
+[debug] Task 5c1a1d2be42f34b3f909a1a230cbc431c4a1f24c1f5507467e2b9baea97e3d91 failed: retries exhausted after 6 attempts, with error: TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'TLSSocket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle
+[debug] [2023-11-12T12:30:37.864Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":3,"complete":1,"success":0,"errored":1,"retried":9,"total":4,"elapsed":192549}
+[debug] [2023-11-12T12:30:39.990Z] [uploadQueue] Retrying task 05dae57b3856f8d50f2767d4d45fe6f80db500ce68f51cfdea814ded8b2c16bc
+[debug] [2023-11-12T12:30:39.991Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/05dae57b3856f8d50f2767d4d45fe6f80db500ce68f51cfdea814ded8b2c16bc [none]
+[debug] [2023-11-12T12:30:39.991Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ulicamango/versions/396fb38ef911f7e6/files/05dae57b3856f8d50f2767d4d45fe6f80db500ce68f51cfdea814ded8b2c16bc [stream]
+[debug] [2023-11-12T12:30:42.881Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Emir\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:254:49)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+[error] 
+[error] Error: An unexpected error has occurred.

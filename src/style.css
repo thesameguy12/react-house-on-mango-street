@@ -1,0 +1,540 @@
+
+
+.mainBody{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    height: 100vh;
+    animation: fade-in;
+    animation-duration: 0.5s;
+    
+}
+nav{
+    position: sticky;
+    top:0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+     
+    font-size: 1.2rem;
+    gap:3rem;
+    
+}
+.link{
+    padding: 0.7rem;
+    text-decoration: none;
+    color:black;
+    transition:background-color;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    
+}
+.link:hover{
+    background-color: rgb(224, 220, 220);
+}
+.home{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+   
+    font-size: 1.5rem;
+    animation: fade-in;
+    animation-duration: 0.5s;
+    
+}
+.welcome{
+    font-size: 2.5rem;
+    width: 768px;
+    color: #6a1c00;
+    background-color: #ffdf79;
+    height: 8rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 62px 0px rgba(156,124,77,0.64);
+    -webkit-box-shadow: 0px 0px 62px 0px rgba(156,124,77,0.64);
+    -moz-box-shadow: 0px 0px 62px 0px rgba(156,124,77,0.64);
+}
+.details{
+    background-color: white;
+    font-size: 1.3rem;
+    width: 768px;
+    padding: 2rem;
+    line-height: 2rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    border-radius: 1rem;
+    text-align: justify;
+    box-shadow: 0px 0px 62px 0px rgba(0,0,0,0.64);
+-webkit-box-shadow: 0px 0px 62px 0px rgba(0,0,0,0.64);
+-moz-box-shadow: 0px 0px 62px 0px rgba(0,0,0,0.64);
+}
+.startReading{
+    position: relative;
+    width: 20rem;
+    height: 100px;
+    font-size: 2rem;
+    border: none;
+    border-radius: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 2rem;
+    background-color: #98d448;
+    color:white;
+    text-shadow: 0px 1px 10px rgba(0,0,0,0.39);
+}
+.startReading:hover{
+    cursor: pointer;
+}
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.mainContent{
+    position: relative;
+    padding:1rem;
+    border-radius: 10px;
+    background-color: white;
+    justify-self: start;
+    width: 768px;
+    margin:0 auto;
+    
+}
+.navPlaceholder{
+    position: relative;
+    height: 100px;
+    width: 100%;
+    margin-top: 5rem;
+    color: #6ec4bb;
+}
+.mainTitle{
+    margin:0;
+    padding: 1rem;
+    font-size: 4rem;
+    text-align: center;
+    background-color: #98d448;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 255, 255); text-shadow: rgb(152, 212, 72) -1px 1px 0px, rgb(152, 212, 72) -2px 2px 0px, rgb(152, 212, 72) -3px 3px 0px, rgba(0, 0, 0, 0.15) -4px 4px 0px, rgba(0, 0, 0, 0.15) -5px 5px 0px, rgba(0, 0, 0, 0.15) -6px 6px 0px; 
+}
+.bookTitle{
+    color:#0a1551;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+}
+.paragrafTitle{
+    text-align: center;
+    color:#0a1551;
+    margin-top:2.5rem;
+    margin-bottom: 0.5rem;
+
+    font-size: 1.1rem;
+}
+.paragrafText{
+    font-size: 1.1rem;
+    color:#0a1551;
+    margin: 0;
+    line-height: 2rem;
+    text-align: justify;
+}
+.paragrafNav{
+    position: fixed;
+    width: 768px;
+    bottom: 1rem;
+    left:50%;
+    transform: translate(-50%);
+    background-color: white;
+    border-radius: 1rem;
+    
+    display:flex;
+    
+    justify-content: space-between;
+}
+.arrowButton{
+    
+    background-color: white;
+    border: none;
+    border-radius: 1rem;
+}
+.arrow{
+    margin: 1rem;
+    width: 3rem;
+}
+.arrow:hover{
+    cursor: pointer;
+}
+.Left{
+    transform: rotate(270deg);
+    
+}
+.Right{
+    transform: rotate(90deg);
+    
+}
+.indexIndicator{
+    font-size: 1.5rem;
+    
+}
+.playContainer{
+    display: flex;
+    justify-content: flex-end;
+    margin-right:2rem
+}
+.playImg{
+    
+    width: 5rem;
+    transition: all 0.1s linear;
+}
+.playImg:hover{
+    cursor: pointer;
+    
+}
+.playButton{
+    position: relative;
+    background-color: white;
+    border: none;
+    margin-top:1rem;
+    
+}
+.portal{
+    
+    position: fixed;
+    
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    
+    background-color: black;
+    background-color: rgba(0,0,0,0.88);
+    
+}
+.portalContainer{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    width: 768px;
+    min-height: 500px;
+    height: 40vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    z-index: 2000;
+    border-radius: 1rem;
+    
+}
+.portalContainer>img{
+    width: 400px;
+    max-height: 70%;
+    bottom: 2rem;
+    z-index: 1000;
+}
+.closeIcon{
+    
+    width: 3rem;
+}
+.closeBtn:hover{
+    cursor: pointer;
+}
+.closeBtn{
+    position: absolute;
+    top:0;
+    background: none;
+    border: none;
+    align-self: flex-end;
+}
+@keyframes audioPlay{
+    0%{
+        height: 5px;
+    }
+    50%{
+        height: 20px;
+    }
+    100%{
+        height: 5px;
+    }
+}
+.audioAnimation{
+    position: absolute;
+   bottom: 1rem;
+
+    display: flex;
+    gap: 5px;
+    transform: rotate(180deg);
+}
+.au{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 10px;
+    
+}
+.a1{
+    animation: audioPlay 1s infinite ease-in-out;
+}
+.a2{
+    animation: audioPlay 1s 0.7s infinite ease-in-out;
+}
+.a3{
+    animation: audioPlay 1s 1s infinite ease-in-out;
+}
+.selectParagraf{
+    
+    width: fit-content;
+    height: 2rem;
+    margin:0 auto;
+    margin-top:4rem;
+    border: 0px;
+    font-size: 1rem;
+    
+}
+.selectParagraf>select{
+    height: 2rem;
+    
+}
+
+
+@media all and (max-width:508px) {
+    .home{
+        position: relative;
+        
+    }
+    .welcome{
+        position: relative;
+        width: 90%;
+        font-size: 1.5rem;
+    }
+    .details{
+        width: 90%;
+        padding: 1rem;
+        font-size: 1.2rem;
+        
+    }
+    .mainContent{
+        width: 90%;
+        margin: 0,auto;
+        padding: 1rem;
+    }
+    .mainTitle{
+        font-size: 1.5rem;
+    }
+    .paragrafText{
+        width: fit-content;
+    }
+    .paragrafNav{
+        width: 100%;
+    }
+    .selectParagraf{
+        width: 100%;
+        
+    }
+    .selectParagraf>select{
+        width: 100%;
+    }
+    
+}
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.loadingContainer{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.8;
+
+}
+.loading{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70px;
+    height: 70px;
+    border: 20px solid white;
+    border-top-color: #98d448;
+    border-radius: 100%;
+    animation: spin 0.5s infinite;
+}
+.chatBotButton{
+    position: fixed;
+    background-color: #98d448;
+    width: 5rem;
+    border: none;
+    border-radius: 100%;
+    padding: 1rem;
+    box-shadow: 1px 1px 25px 1px rgba(55,184,36,0.75);
+-webkit-box-shadow: 1px 1px 25px 1px rgba(55,184,36,0.75);
+-moz-box-shadow: 1px 1px 25px 1px rgba(55,184,36,0.75);
+bottom: 1rem;
+right: 1rem;
+transition:box-shadow 0.2s linear;
+}
+.chatBotButton:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 25px 9px rgba(55,184,36,0.75);
+-webkit-box-shadow: 1px 1px 25px 9px rgba(55,184,36,0.75);
+-moz-box-shadow: 1px 1px 25px 9px rgba(55,184,36,0.75);
+}
+
+.chatFrame{
+    position:fixed;
+    right:1rem;
+    bottom:3rem;
+    height: 600px;
+    width: 300px;
+    background-color: white;
+    transition:right 0.3s linear;
+    z-index: 101;
+}
+iframe{
+    height: 600px;
+}
+.chatCloseContainer{
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    height: 2rem;
+
+}
+.chatCloseButton{
+    
+    background-color: white;
+    border: none;
+    height:100%;
+    transition: background-color 0.1s linear;
+}
+.chatCloseButton:hover{
+    cursor: pointer;
+    background-color: rgb(224, 220, 220);
+}
+.chatCloseIcon{
+    width: 1rem;
+}
+.hamburgerButton{
+    position: sticky;
+    display: none;
+    top:0.5rem;
+    left: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: #98d448;
+    border: none;
+    border-radius: 1rem;
+    transition:background-color 0.4s linear;
+    z-index: 100;
+}
+.hamburgerButton:hover{
+    cursor: pointer;
+    background-color: #6eb313;
+}
+.exitMenuButton{
+    background-color: white;
+    border: none;
+    align-self: flex-end;
+    display:none;
+}
+@media all and (max-width:680px){
+    .welcome{
+        max-width: 475px;
+    }
+    .details{
+        max-width: 475px;
+    }
+    .mainContent{
+        max-width: 475px;
+    }
+    .mainTitle{
+        font-size: 2rem;
+    }
+    .paragrafNav{
+        max-width: 475px;
+    }
+    .selectParagraf>select{
+        max-width: 475px;
+    }
+    .portal{
+        width: 100%;
+        height: 100%;
+    }
+    .portalContainer{
+        width: 90%;
+        height: 600px;
+    }
+    .portalContainer>img{
+        width: 100%;
+
+    }
+}
+
+
+@media all and (max-width:800px){
+    .welcome{
+        max-width: 640px;
+    }
+    .details{
+        max-width: 640px;
+    }
+    .mainContent{
+        max-width: 640px;
+    }
+    .mainTitle{
+        font-size: 2rem;
+    }
+    .paragrafNav{
+        max-width: 640px;
+    }
+    .selectParagraf>select{
+        max-width: 640px;
+    }
+    .portalContainer{
+        max-width: 640px;
+        height: 600px;
+    }
+    .audioAnimation{
+        top:6rem;
+    }
+    .chatBotButton{
+        top:1rem;
+        bottom:auto;
+        width: 4rem;
+        height: 4rem;
+    }
+    .hamburgerButton{
+        display: block;
+    }
+    nav{
+        position: fixed;
+        flex-direction: column;
+        justify-content:start;
+        width: 300px;
+        text-align: center;
+        height: 100%;
+        z-index: 200;
+        transition: left 0.3s linear;
+    }
+    .exitMenuButton{
+        display:flex;
+    }
+}
