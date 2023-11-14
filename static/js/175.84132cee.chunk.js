@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmango2=self.webpackChunkmango2||[]).push([[175],{175:(n,u,e)=>{e.r(u),e.d(u,{default:()=>t});e(791);var s=e(184);const t=function(n){return(0,s.jsx)("div",{children:"About us"})}}}]);
+//# sourceMappingURL=175.84132cee.chunk.js.map
