@@ -10,7 +10,7 @@ function Portal(props) {
     const[currentIndex]=useContext(paragrafNavContext)
 
     const audio=new Audio("./2019-04-20_-_Quiet_Time_-_David_Fesliyan.mp3");
-    
+    audio.crossOrigin = 'anonymous';
     useEffect(()=>{
         if(showPortal){
             audio.play()
